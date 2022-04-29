@@ -160,6 +160,11 @@
             </div>
             <!-- #endregion -->
         </div>
+
+        <div>
+            <ul type="none">
+                <li v-for="(item,index) in data"> ${index} ${item} </li>
+            </ul>
     </form>
 
 </div>
@@ -171,8 +176,9 @@
 module.exports = {
     el: "#app",
     delimiters: ['${', '}'],
-    props:{
-            uuid: "{{uuid}}", // 接收傳過來的uuid
+    props: {
+        uuid: "{{uuid}}", // 接收傳過來的uuid
+        data: "{{data}}"
     },
     data() {
         return {
