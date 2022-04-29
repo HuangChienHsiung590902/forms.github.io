@@ -6,19 +6,19 @@
         <!-- #region name -->
         <div class="col-sm-3">
             <div class="mb-3">
-                <label for="name" class="form-label">Name</label>
-                <input type="text" class="form-control" id="name" v-model="username" placeholder="Name" required />
+                <label for="fname" class="form-label">Fname</label>
+                <input type="text" class="form-control" id="fname" v-model="username" placeholder="First Name" required />
             </div>
         </div>
         <!-- #endregion -->
-    <!-- #region name -->
-    <div class="col-sm-3">
-        <div class="mb-3">
-            <label for="name" class="form-label">Name</label>
-            <input type="text" class="form-control" id="name" v-model="username" placeholder="Name" required />
+        <!-- #region name -->
+        <div class="col-sm-3">
+            <div class="mb-3">
+                <label for="lname" class="form-label">Lname</label>
+                <input type="text" class="form-control" id="lname" v-model="username" placeholder="Last Name" required />
+            </div>
         </div>
-    </div>
-    <!-- #endregion -->
+        <!-- #endregion -->
     </div>
 
     text : ${mode} // ${search}
@@ -33,8 +33,8 @@ module.exports = {
     delimiters: ["${", "}"],
     props: {
         data: Object,
-        mode:String,
-        search:String,
+        mode: String,
+        search: String,
     },
     emit: ["update"], // <---- try this
     data() {
