@@ -171,13 +171,15 @@
 module.exports = {
     el: "#app",
     delimiters: ['${', '}'],
+    props:{
+            uuid: "{{uuid}}", // 接收傳過來的uuid
+    },
     data() {
         return {
             title: "基本資料輸入",
             title1: 'title-1',
             title2: 'title-2',
             title3: 'title-3',
-            uuid: "{{uuid}}", // 接收傳過來的uuid
             UserName: "",
             email: "xxx@gmail.com",
             sele: "",
