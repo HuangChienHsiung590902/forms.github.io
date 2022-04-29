@@ -1,33 +1,42 @@
-
+{{include '../common/header.htm'}}
+{{include '../common/nav.htm'}}
 <template>
-  <div class="component">
-    <h1>{{ title }}</h1>
-    <p>{{ subtitle }}</p>
-    <p>{{ content }}</p> 
-  </div>
+<div>
+    <div class="row">
+        <!-- #region name -->
+        <div class="col-sm-3">
+            <div class="mb-3">
+                <label for="name" class="form-label">Name</label>
+                <input type="text" class="form-control" id="name" v-model="username" placeholder="Name" required />
+            </div>
+        </div>
+        <!-- #endregion -->
+    </div>
+
+    text : ${mode} // ${search}
+    <!-- 因為是用props接收資料的,所以只能用 ${} 處理資料 -->
+    <ul type="none">
+        <li v-for="(item,index) in data">${item.id}</li>
+    </ul>
 </template>
 
 <script>
 module.exports = {
-  data: function() {
-    return {
-      title: "這是標題",
-      subtitle: "這是副標題",
-      content:
-        "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nobis cumque eius illo officia consequuntur similique illum sint assumenda harum placeat doloremque blanditiis earum, quaerat minus, fugiat voluptate, nesciunt sit enim!"
-    };
-  }
+    delimiters: ["${", "}"],
+    props: {
+        data: Object,
+        mode:String,
+        search:String,
+    },
+    emit: ["update"], // <---- try this
+    data() {
+        return {
+            username: "XXX",
+        };
+    },
 };
 </script>
 
 <style scoped>
-.component {
-  border: 1px solid #000;
-  padding: 10px;
-  margin: 10px;
-  color: blue;
-}
-.component > img {
-  width: 100%;
-}
+
 </style>
