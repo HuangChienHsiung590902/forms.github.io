@@ -163,7 +163,7 @@
 
         <div>
             <ul type="none">
-                <li v-for="(item,index) in data"> ${index.uui} ${sele} ${item} </li>
+                <li v-for="(item,index) in data"> ${index} ${item.sele} ${item.uuid} </li>
             </ul>
     </form>
 
