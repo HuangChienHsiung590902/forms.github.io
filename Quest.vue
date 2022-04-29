@@ -174,7 +174,7 @@
 
 <script>
 module.exports = {
-    el: "#app",
+    // el: "#app",
     delimiters: ['${', '}'],
     props: {
         uuid: "{{uuid}}", // 接收傳過來的uuid
