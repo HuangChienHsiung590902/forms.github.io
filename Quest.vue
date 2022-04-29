@@ -1,5 +1,5 @@
 <template>
-<div id="app">
+<div>
     <form @submit="formSubmit">
         <h1>${title}</h1>
         <div class="row container">
@@ -174,7 +174,6 @@
 
 <script>
 module.exports = {
-    // el: "#app",
     delimiters: ['${', '}'],
     props: {
         uuid: "{{uuid}}", // 接收傳過來的uuid
